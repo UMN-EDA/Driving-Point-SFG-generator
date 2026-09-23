@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Documentation · Driving-Point SFG Generator</title><meta name="description" content="Install the driving-point signal-flow graph generator, describe your circuit, and generate graphs, paths, loops, and symbolic expressions."><link rel="stylesheet" href="../assets/site.css"></head><body>
+<a class="skip" href="#main">Skip to content</a><header class="site-nav"><div class="wrap nav-inner"><a class="brand" href="../index.html">Driving-Point SFG<small>University of Minnesota · EDA</small></a><nav class="nav-links" aria-label="Main navigation"><a href="../index.html#examples">Examples</a><a href="index.html" aria-current="page">Documentation</a><a href="https://github.com/UMN-EDA/Driving-Point-SFG-generator">GitHub ↗</a></nav></div></header>
+<main id="main" class="wrap guide"><div class="page-header"><p class="eyebrow" style="color:var(--blue)">Documentation</p><h1>From circuit description<br>to signal-flow graph.</h1><p class="muted">Use the Python command-line interface to select an example, run the original circuit engine, and explore the exported graph.</p><nav class="toc" aria-label="On this page"><a href="#quick-start">Installation</a><a href="#commands">Commands</a><a href="#input-format">Circuit format</a><a href="#outputs">Outputs</a><a href="#engines">Engines</a><a href="#batch">Batch runs</a></nav></div>
+<section id="quick-start"><h2>Install and run</h2><p>You need <strong>Python 3.8 or newer</strong> and a <strong>C++11 compiler</strong>, such as <code>g++</code>. Graphviz is optional; Matplotlib supplies a plotting backend when <code>dot</code> is unavailable.</p><pre><code>git clone git@github.com:UMN-EDA/Driving-Point-SFG-generator.git
+cd Driving-Point-SFG-generator
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+
+python sfg.py 5T_OTA_Integrator_tran</code></pre><p>The first run compiles the selected C++ engine. The wrapper prints the results directory, where <code>report.html</code> provides the graph and edge-gain table. Each run receives a separate timestamped directory under <code>runs/</code>.</p></section>
+<section id="commands"><h2>Select an operation</h2><div class="table-scroll"><table><thead><tr><th>Mode</th><th>Result</th></tr></thead><tbody><tr><td><code>graph</code></td><td>Graph exports, PNG/SVG images, and HTML report; the default.</td></tr><tr><td><code>paths</code></td><td>Graph plus forward paths and symbolic path products.</td></tr><tr><td><code>loops</code></td><td>Graph plus cycles and symbolic cycle products.</td></tr><tr><td><code>analysis</code></td><td>Graph, forward paths, and cycles.</td></tr><tr><td><code>transfer</code></td><td>Original C++ paths, loops, numerator, and denominator expressions.</td></tr></tbody></table></div><pre><code># Graph plus paths and cycles
+python sfg.py FirstOrderSCFilter --mode analysis
+
+# Run a custom circuit
+python sfg.py /path/to/my_circuit.isc --mode analysis
+
+# Original C++ path and loop analysis
+python sfg.py FirstOrderSCFilter --mode analysis --analysis-backend legacy
+
+# Original symbolic transfer-function routines
+python sfg.py 1stRCLPF --mode transfer
+
+# Save a run to a new directory
+python sfg.py 2Stage_OTA --output runs/my_ota
+
+# List examples and command-line options
+python sfg.py --list-examples
+python sfg.py --help</code></pre><p>For <code>paths</code>, <code>loops</code>, and <code>analysis</code>, Python graph analysis is the default. It enumerates simple paths/cycles and preserves distinct parallel edges. <code>--analysis-backend legacy</code> selects the original C++ routines. Transfer mode always invokes the C++ routines.</p><p>Additional options include <code>--no-plot</code>, <code>--timeout</code>, <code>--max-walks</code>, and <code>--count TEXT</code>. See the <a href="https://github.com/UMN-EDA/Driving-Point-SFG-generator/blob/main/docs/usage.md">complete command reference</a>.</p></section>
+<section id="input-format"><h2>Describe a circuit</h2><p>Inputs are plain-text <code>.isc</code> files. Circuit nodes are numbered from 1 through the declared node count; <code>0</code> denotes ground. Use underscore-separated records, place the input/output connections first, and end the file with <code>END</code>.</p><h3>Continuous-time example</h3><p>A node-count header followed by the circuit connections:</p><pre><code>2
+VI_1_1
+2_1_VO
+1_G1_2
+2_C1_0
+END</code></pre><p>This is the first-order RC low-pass example: conductance <code>G1</code> connects input node 1 to output node 2, with capacitance <code>C1</code> to ground.</p><h3>Switched-capacitor and transistor examples</h3><p>Use two header lines: phase count, then node count. Switch labels <code>S1</code>, <code>S2</code>, and so on identify their active phases. Single-phase transistor inputs start with a phase count of <code>1</code>.</p><pre><code>2
+5
+VI_1_1
+5_1_VO
+3_OP-_4
+2_C1_0
+4_C2_3
+1_S1_2
+4_S1_5
+2_S2_3
+END</code></pre><div class="table-scroll"><table><thead><tr><th>Record</th><th>Meaning</th></tr></thead><tbody><tr><td><code>SOURCE_ELEMENT_DESTINATION</code></td><td>A conductance, capacitor, op-amp, or switch branch.</td></tr><tr><td><code>VI_1_NODE</code></td><td>Unit-weight input connection.</td></tr><tr><td><code>NODE_1_VO</code></td><td>Unit-weight output connection.</td></tr><tr><td><code>DEVICE_GATE_DRAIN_SOURCE</code></td><td>Transistor record, for example <code>M0_8_4_7</code> or <code>P1_4_4_5</code>.</td></tr></tbody></table></div><p><a href="https://github.com/UMN-EDA/Driving-Point-SFG-generator/blob/main/docs/input-format.md">Read the complete input-format guide →</a></p></section>
+<section id="outputs"><h2>Explore the results</h2><p>The HTML report combines the graph, exact edge expressions, and downloadable data. Long gains use short edge IDs in the image, with complete expressions in the legend.</p><div class="table-scroll"><table><thead><tr><th>Files</th><th>Contents</th></tr></thead><tbody><tr><td><code>report.html</code></td><td>Graph viewer, edge legend, and analysis links.</td></tr><tr><td><code>graph.png</code>, <code>graph.svg</code></td><td>Raster and scalable graph images.</td></tr><tr><td><code>graph.tsv</code>, <code>nodes.tsv</code>, <code>graph.json</code></td><td>Directed graph structure and symbolic weights.</td></tr><tr><td><code>paths.tsv</code>, <code>loops.tsv</code></td><td>Node/edge sequences for the selected analysis.</td></tr><tr><td><code>path_gains.txt</code>, <code>loop_gains.txt</code></td><td>Symbolic path and loop products.</td></tr><tr><td><code>transfer_function.txt</code></td><td>Numerator and denominator strings in transfer mode.</td></tr><tr><td><code>run.json</code></td><td>Engine, mode, source provenance, timing, and counts.</td></tr></tbody></table></div><p>To regenerate plots from an existing run:</p><pre><code>python plot_graph.py results/analysis/5T_OTA_Integrator_tran</code></pre></section>
+<section id="engines"><h2>Engine selection</h2><p>The wrapper chooses the engine from the input. The original C++ files and circuit examples are preserved in the repository; the command-line adapter supplies input selection and unified exports.</p><div class="table-scroll"><table><thead><tr><th>Input</th><th>Engine</th><th>Original source</th></tr></thead><tbody><tr><td>Node-count header</td><td><code>ct</code></td><td><code>readCkt3.cpp</code></td></tr><tr><td>Phase-count header, no transistors</td><td><code>sc</code></td><td><code>readCkt3_SC_1.7.cpp</code></td></tr><tr><td>Transistor records</td><td><code>latest</code></td><td><code>readCkt3_SC_1.8_NEW.cpp</code></td></tr></tbody></table></div><p><a href="https://github.com/UMN-EDA/Driving-Point-SFG-generator/blob/main/docs/architecture.md">Explore the implementation →</a></p></section>
+<section id="batch"><h2>Run the full example set</h2><pre><code># Generate all example graphs
+python run_examples.py
+
+# Include forward paths and cycles
+python run_examples.py --mode analysis
+
+# Select a fresh output directory
+python run_examples.py --mode analysis --output-root runs/all_examples
+
+# Run the package tests
+python -m unittest discover -s tests -v</code></pre><p>Each example gets its own directory. A batch <code>index.html</code> links the resulting reports.</p><a class="button" href="../index.html#examples">Browse the published examples</a></section>
+</main><footer class="site-footer"><div class="wrap footer-inner"><span>Driving-Point Signal-Flow Graph Generator · UMN EDA</span><span><a href="../index.html">Home</a> · <a href="https://github.com/UMN-EDA/Driving-Point-SFG-generator/blob/main/LICENSE">BSD 3-Clause License</a></span></div></footer></body></html>

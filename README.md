@@ -1,5 +1,7 @@
 # Driving-Point Signal-Flow Graph Generator
 
+[Website and example gallery](https://umn-eda.github.io/Driving-Point-SFG-generator/) · [Online documentation](https://umn-eda.github.io/Driving-Point-SFG-generator/docs/)
+
 Generate driving-point signal-flow graphs from compact circuit descriptions. The toolkit supports continuous-time filters, multiphase switched-capacitor circuits, and transistor-level circuits. A Python command-line interface builds the C++ engines, selects the appropriate engine, and produces graph data, plots, and analysis results.
 
 ![Transistor-level signal-flow graph](results/analysis/5T_OTA_Integrator_tran/graph.png)
@@ -72,7 +74,7 @@ The package contains **17 circuit examples** with generated results:
 - [Original C++ analysis results](results/legacy_analysis/index.html)
 - [Transfer-function examples](results/transfer/README.md)
 
-Download the repository and open the HTML files locally to view the reports. The PNG and SVG images can also be viewed directly on GitHub.
+Browse the reports on the [project website](https://umn-eda.github.io/Driving-Point-SFG-generator/), or download the repository and open the HTML files locally. The PNG and SVG images can also be viewed directly on GitHub.
 
 ```bash
 # Generate the complete gallery in a fresh timestamped directory
