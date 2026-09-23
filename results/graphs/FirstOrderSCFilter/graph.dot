@@ -1,0 +1,38 @@
+digraph SFG {
+graph [rankdir=LR, bgcolor="white", pad=0.35, nodesep=0.35, ranksep=0.8];
+node [shape=ellipse, style=filled, fontname="Helvetica", fontsize=11, color="#64748b"];
+edge [fontname="Helvetica", fontsize=9, color="#64748b", arrowsize=0.7];
+"-100" [label="VI", fillcolor="#dcfce7"];
+"-4.000000_S2" [label="-4_S2", fillcolor="#ffedd5"];
+"-52.000000_S1" [label="-52_S1", fillcolor="#ffedd5"];
+"1" [label="1", fillcolor="#dbeafe"];
+"10.000000_S1" [label="10_S1", fillcolor="#dbeafe"];
+"100" [label="VO", fillcolor="#dcfce7"];
+"128.000000_S2" [label="128_S2", fillcolor="#dbeafe"];
+"192.000000_S1" [label="192_S1", fillcolor="#dbeafe"];
+"2.000000_S2" [label="2_S2", fillcolor="#dbeafe"];
+"4.000000_S2" [label="4_S2", fillcolor="#dbeafe"];
+"52.000000_S1" [label="52_S1", fillcolor="#dbeafe"];
+"-100" -> "10.000000_S1" [label="1", tooltip="1"];
+"-100" -> "2.000000_S2" [label="1", tooltip="1"];
+"-4.000000_S2" -> "4.000000_S2" [label="(1/(+C1+C0))", tooltip="(1/(+C1+C0))"];
+"-52.000000_S1" -> "52.000000_S1" [label="(1/(+C3+C2+C1+C0))", tooltip="(1/(+C3+C2+C1+C0))"];
+"10.000000_S1" -> "-52.000000_S1" [label="C1", tooltip="C1"];
+"10.000000_S1" -> "-52.000000_S1" [label="C2", tooltip="C2"];
+"10.000000_S1" -> "-4.000000_S2" [label="-z^-1C1", tooltip="-z^-1C1"];
+"128.000000_S2" -> "100" [label="1", tooltip="1"];
+"128.000000_S2" -> "-4.000000_S2" [label="C0", tooltip="C0"];
+"128.000000_S2" -> "-52.000000_S1" [label="-z^-1C0", tooltip="-z^-1C0"];
+"192.000000_S1" -> "100" [label="1", tooltip="1"];
+"192.000000_S1" -> "-52.000000_S1" [label="C3", tooltip="C3"];
+"192.000000_S1" -> "-52.000000_S1" [label="C0", tooltip="C0"];
+"192.000000_S1" -> "-4.000000_S2" [label="-z^-1C0", tooltip="-z^-1C0"];
+"2.000000_S2" -> "-4.000000_S2" [label="C1", tooltip="C1"];
+"2.000000_S2" -> "-52.000000_S1" [label="-z^-1C1", tooltip="-z^-1C1"];
+"4.000000_S2" -> "128.000000_S2" [label="OP-", tooltip="OP-"];
+"4.000000_S2" -> "-52.000000_S1" [label="z^-1C1", tooltip="z^-1C1"];
+"4.000000_S2" -> "-52.000000_S1" [label="z^-1C0", tooltip="z^-1C0"];
+"52.000000_S1" -> "192.000000_S1" [label="OP-", tooltip="OP-"];
+"52.000000_S1" -> "-4.000000_S2" [label="z^-1C1", tooltip="z^-1C1"];
+"52.000000_S1" -> "-4.000000_S2" [label="z^-1C0", tooltip="z^-1C0"];
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StraySensitiveSCIntegrator.isc — signal-flow graph</title>
+<style>
+body {font:16px/1.5 system-ui,sans-serif;color:#172033;max-width:1400px;margin:36px auto;padding:0 24px;background:#f8fafc}
+h1 {margin-bottom:4px} .card {background:white;border:1px solid #e2e8f0;border-radius:12px;padding:20px;margin:20px 0}
+a {color:#1d4ed8} object {width:100%;min-height:420px;max-height:900px} table {border-collapse:collapse;width:100%}
+th,td {padding:10px;border-bottom:1px solid #e2e8f0;text-align:left} code {overflow-wrap:anywhere} pre {overflow:auto}
+</style><h1>StraySensitiveSCIntegrator.isc</h1><p>Driving-point signal-flow graph · engine: sc · mode: analysis · status: success</p>
+<p>Nodes: 13 · Edges: 16 · Paths: 2 · Loops: 5</p><div class="card"><object data="graph.svg" type="image/svg+xml"><img src="graph.png" alt="Signal-flow graph"></object>
+<p><a href="graph.svg">Open full SVG</a> · <a href="graph.png">PNG image</a></p>
+<p>Green: input/output. Orange: auxiliary nodes. Blue: circuit nodes. Long gains use edge IDs; exact expressions appear below.</p></div>
+<div class="card"><h2>Edge gains</h2><table><thead><tr><th>ID</th><th>Source</th><th>Destination</th><th>Gain</th></tr></thead><tbody><tr><td>e001</td><td>-100</td><td>2_S2</td><td><code>1</code></td></tr><tr><td>e002</td><td>-100</td><td>6_S1</td><td><code>1</code></td></tr><tr><td>e003</td><td>-12_S2</td><td>12_S2</td><td><code>(1/(+C1+C2))</code></td></tr><tr><td>e004</td><td>-32_S2</td><td>32_S2</td><td><code>(1/())</code></td></tr><tr><td>e005</td><td>-8_S1</td><td>8_S1</td><td><code>(1/(+C2))</code></td></tr><tr><td>e006</td><td>12_S2</td><td>16_S2</td><td><code>OP-</code></td></tr><tr><td>e007</td><td>12_S2</td><td>-8_S1</td><td><code>z^-1C2</code></td></tr><tr><td>e008</td><td>16_S2</td><td>-12_S2</td><td><code>C2</code></td></tr><tr><td>e009</td><td>16_S2</td><td>-8_S1</td><td><code>-z^-1C2</code></td></tr><tr><td>e010</td><td>32_S2</td><td>100</td><td><code>1</code></td></tr><tr><td>e011</td><td>48_S1</td><td>100</td><td><code>1</code></td></tr><tr><td>e012</td><td>48_S1</td><td>-8_S1</td><td><code>C2</code></td></tr><tr><td>e013</td><td>48_S1</td><td>-12_S2</td><td><code>-z^-1C2</code></td></tr><tr><td>e014</td><td>6_S1</td><td>-12_S2</td><td><code>z^-1C1</code></td></tr><tr><td>e015</td><td>8_S1</td><td>48_S1</td><td><code>OP-</code></td></tr><tr><td>e016</td><td>8_S1</td><td>-12_S2</td><td><code>z^-1C2</code></td></tr></tbody></table></div>
+<div class="card"><h2>Paths and loops</h2><details><summary>Paths</summary><pre>-100	1	6.000000_S1	z^-1C1	-12.000000_S2	(1/(+C1+C2))	12.000000_S2	OP-	16.000000_S2	-z^-1C2	-8.000000_S1	(1/(+C2))	8.000000_S1	OP-	48.000000_S1	1	100
+-100	1	6.000000_S1	z^-1C1	-12.000000_S2	(1/(+C1+C2))	12.000000_S2	z^-1C2	-8.000000_S1	(1/(+C2))	8.000000_S1	OP-	48.000000_S1	1	100
+</pre></details><details><summary>Loops</summary><pre>-12.000000_S2	(1/(+C1+C2))	12.000000_S2	OP-	16.000000_S2	C2	-12.000000_S2
+-8.000000_S1	(1/(+C2))	8.000000_S1	OP-	48.000000_S1	C2	-8.000000_S1
+-12.000000_S2	(1/(+C1+C2))	12.000000_S2	OP-	16.000000_S2	-z^-1C2	-8.000000_S1	(1/(+C2))	8.000000_S1	OP-	48.000000_S1	-z^-1C2	-12.000000_S2
+-12.000000_S2	(1/(+C1+C2))	12.000000_S2	OP-	16.000000_S2	-z^-1C2	-8.000000_S1	(1/(+C2))	8.000000_S1	z^-1C2	-12.000000_S2
+-12.000000_S2	(1/(+C1+C2))	12.000000_S2	z^-1C2	-8.000000_S1	(1/(+C2))	8.000000_S1	z^-1C2	-12.000000_S2
+</pre></details></div><p><a href="graph.tsv">graph.tsv</a> · <a href="nodes.tsv">nodes.tsv</a> · <a href="graph.json">graph.json</a> · <a href="graph.dot">graph.dot</a> · <a href="edge_legend.tsv">edge_legend.tsv</a> · <a href="paths.tsv">paths.tsv</a> · <a href="loops.tsv">loops.tsv</a> · <a href="path_gains.txt">path_gains.txt</a> · <a href="loop_gains.txt">loop_gains.txt</a> · <a href="all_paths.txt">all_paths.txt</a> · <a href="generator.log">generator.log</a> · <a href="run.json">run.json</a></p>
+<p>Generated with the driving-point signal-flow graph toolkit.</p></html>

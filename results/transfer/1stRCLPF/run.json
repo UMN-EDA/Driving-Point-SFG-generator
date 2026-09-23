@@ -1,0 +1,33 @@
+{
+  "input_name": "1stRCLPF.isc",
+  "input_sha256": "9a1d01bb8016514015de3a7f355d83e2316f93b3ecab6ea18d5ee4dd79f6a777",
+  "engine": "ct",
+  "mode": "transfer",
+  "phases": 1,
+  "started_utc": "2026-09-23T15:18:23.073376+00:00",
+  "status": "success",
+  "timeout_seconds": 20.0,
+  "analysis_backend": "legacy",
+  "max_walks": 100000,
+  "compiler": "g++ (GCC) 8.5.0 20210514 (Red Hat 8.5.0-28)",
+  "command": [
+    "g++",
+    "-std=c++11",
+    "-O0",
+    "-DSFG_ENGINE=1",
+    "src/driver.cpp",
+    "-o",
+    "build/sfg-ct-c87d3b8ee4bcf133"
+  ],
+  "build_sha256": "c87d3b8ee4bcf133d0d134949095aed9eb68807be7f794359933ec098b4c4e2d",
+  "legacy_source": "src/legacy/readCkt3.cpp",
+  "legacy_sha256": "bf2ccd1eedb380ff0fd8e6bba1eb15451cdb2716b19e30e0f92a2ffd2c48a027",
+  "return_code": 0,
+  "elapsed_seconds": 0.122,
+  "node_count": 6,
+  "edge_count": 4,
+  "paths_count": 1,
+  "loops_count": 0,
+  "command_directory": "package root",
+  "plot_status": "success"
+}

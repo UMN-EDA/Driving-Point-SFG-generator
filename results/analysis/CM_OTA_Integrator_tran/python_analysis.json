@@ -1,0 +1,7 @@
+{
+  "backend": "networkx",
+  "networkx_version": "2.5",
+  "semantics": "Simple node paths/cycles expanded over each distinct parallel edge; no symbolic simplification.",
+  "paths_count": 26,
+  "loops_count": 5
+}

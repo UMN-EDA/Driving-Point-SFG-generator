@@ -1,0 +1,29 @@
+{
+  "input_name": "ParasiticSensitiveIntegrator_tran.isc",
+  "input_sha256": "cc4721804a960cb4ff1082fa5d422ec70a0dc51b88f46f37da41e283a2d387dc",
+  "engine": "latest",
+  "mode": "graph",
+  "phases": 2,
+  "started_utc": "2026-09-23T15:13:08.444072+00:00",
+  "status": "success",
+  "timeout_seconds": 20.0,
+  "compiler": "g++ (GCC) 8.5.0 20210514 (Red Hat 8.5.0-28)",
+  "command": [
+    "g++",
+    "-std=c++11",
+    "-O0",
+    "-DSFG_ENGINE=3",
+    "src/driver.cpp",
+    "-o",
+    "build/sfg-latest-12dcba3e212ca355"
+  ],
+  "build_sha256": "12dcba3e212ca355d4393205b40ff384331ad487423628c8a81c3bea27697a96",
+  "legacy_source": "src/legacy/readCkt3_SC_1.8_NEW.cpp",
+  "legacy_sha256": "062595caf247ba5f160cac9d0783161d88f1f540d6ec0a2e1bd12d45416cc73c",
+  "return_code": 0,
+  "elapsed_seconds": 0.078,
+  "node_count": 31,
+  "edge_count": 44,
+  "plot_status": "success",
+  "command_directory": "package root"
+}

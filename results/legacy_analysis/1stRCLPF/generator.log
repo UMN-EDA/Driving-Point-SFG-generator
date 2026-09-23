@@ -1,0 +1,84 @@
+
+WORKING
+ n=2
+CREATING NODES IN THE GRAPH
+CREATING NODES IN THE GRAPH
+
+STRING OBTAINED IS 1
+
+STRING OBTAINED IS 1
+VI	1	1
+
+STRING OBTAINED IS 1
+
+STRING OBTAINED IS 1
+2	1	VO
+
+STRING OBTAINED IS G1
+
+STRING OBTAINED IS G1
+1	G1	2
+
+STRING OBTAINED IS C1
+
+STRING OBTAINED IS C1
+2	C1	0
+WORKING
+VI	1	1
+2	1	VO
+1	G1	2
+2	sC1	0
+CHECK HERE FOR CIRCUIT DETAILS
+NODE ID: -100
+NODE ID: 0	sC1
+NODE ID: 1	G1
+NODE ID: 2	G1	sC1
+NODE ID: 100
+*****************************************************
+NODE ID: -100	FLAG = 0
+
+NO INPUTS
+
+OUTPUTS
+1	1
+*****************************************************
+NODE ID: -2	FLAG = 1
+
+INPUTS
+1	G1
+
+OUTPUTS
+2	(1/(G1+sC1))
+*****************************************************
+NODE ID: 0	FLAG = 0
+
+NO INPUTS
+
+NO OUTPUTS
+*****************************************************
+NODE ID: 1	FLAG = 0
+
+INPUTS
+-100	1
+
+OUTPUTS
+-2	G1
+*****************************************************
+NODE ID: 2	FLAG = 1
+
+INPUTS
+-2	(1/(G1+sC1))
+
+OUTPUTS
+100	1
+*****************************************************
+NODE ID: 100	FLAG = 0
+
+INPUTS
+2	1
+
+NO OUTPUTS
+DISPLAYING FORWARD PATH : -100	1	-2	2	100	
+GAIN OF THIS FORWARD PATH IS = (G1.(1/(G1+sC1)).)
+NO LOOPS IN THIS CIRCUIT
+SFG adapter completed.

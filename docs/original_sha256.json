@@ -1,0 +1,23 @@
+{
+  "src/legacy/readCkt3.cpp": "bf2ccd1eedb380ff0fd8e6bba1eb15451cdb2716b19e30e0f92a2ffd2c48a027",
+  "src/legacy/readCkt3_SC_1.7.cpp": "4051feb25729ea9216807effbd55e763b5012dd6836375ed8fdbe663d1f67d27",
+  "src/legacy/readCkt3_SC_1.8_NEW.cpp": "062595caf247ba5f160cac9d0783161d88f1f540d6ec0a2e1bd12d45416cc73c",
+  "examples/continuous_time/1stRCLPF.isc": "9a1d01bb8016514015de3a7f355d83e2316f93b3ecab6ea18d5ee4dd79f6a777",
+  "examples/transistor/2Stage_OTA.isc": "6b5f177d03f7658d531fa8db0ff52acc3b4ae5331dafebda3c8a40c61bb4432b",
+  "examples/transistor/5T_OTA_Integrator_tran.isc": "02161581e391e236af4ca57465a2b65f7589c02732d155ac5e17b479aac1f6dc",
+  "examples/transistor/5T_OTA_Single_Ended_Stack_Integrator.isc": "e2f47d31dafc6736c966d460a8d260b292fd4681848b6e4b1698a1c25f355e6b",
+  "examples/continuous_time/Boctor_LPNotch.isc": "a800af997424eb45bbe1a18d5aa5aef5ca2a3b0a9b6079c817b51e03e599c7f4",
+  "examples/transistor/CM_OTA_Integrator_tran.isc": "7109d1a8b8009f1ac54b1416a081ca08dc7ca8bfdf7fe87e21fb679b33d2cc50",
+  "examples/switched_capacitor/FirstOrderSCFilter.isc": "d80207a44882ea3c9d5b48ab6757664b156d1916b1e5f3136ee8b84757dac221",
+  "examples/switched_capacitor/LowQSCBiquadFilter.isc": "166810ea277208127207b07642d66f9b3962c5d675a6bf2a14e8d686545884dd",
+  "examples/continuous_time/MultiFBBP.isc": "41e7b28ea79be822b5594e774029f996bda1d2f6edf87d982d2de84b9c2bf7a9",
+  "examples/experimental/NEW_TEST.isc": "957c24a1667ba7977b0754bdbcc9a3f3f46cd608667bbbd1b3f399953141fd55",
+  "examples/switched_capacitor/ParasiticSensitiveIntegrator.isc": "ea05e93af9fa30f77bafb93c54040971cde85e841f768aaa9638341dd795e925",
+  "examples/transistor/ParasiticSensitiveIntegrator_tran.isc": "cc4721804a960cb4ff1082fa5d422ec70a0dc51b88f46f37da41e283a2d387dc",
+  "examples/continuous_time/Sallen_Key.isc": "91cc66ff39e7b379319bae24f32b6e873c219170dd455b80c6d3e72f7233d1bd",
+  "examples/switched_capacitor/SimulatedInductor.isc": "bfdcdd4d95e77e917d217dfc7a49c54eb3b23162c464c4c8a7909e6ad479214b",
+  "examples/switched_capacitor/StraySensitiveSCIntegrator.isc": "ea05e93af9fa30f77bafb93c54040971cde85e841f768aaa9638341dd795e925",
+  "examples/continuous_time/TowThomasBQ.isc": "0fe6d422349f2ad9f46701e10cad49e3a40dbab59714b7979deda4dec5e50ea0",
+  "examples/continuous_time/TwinTNotch.isc": "e9f83f755f36043ee4153bc4b2c91cedc66d5fb0827448b81a2ff590449370cb",
+  "src/legacy/ALGORITHM.original.txt": "7db4fc9330ebb5c25291953a0d16c88a54a9ca5eaa7e6e8647d098c4092e921a"
+}

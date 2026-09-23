@@ -1,0 +1,33 @@
+{
+  "input_name": "5T_OTA_Single_Ended_Stack_Integrator.isc",
+  "input_sha256": "e2f47d31dafc6736c966d460a8d260b292fd4681848b6e4b1698a1c25f355e6b",
+  "engine": "latest",
+  "mode": "analysis",
+  "phases": 1,
+  "started_utc": "2026-09-23T15:18:22.062570+00:00",
+  "status": "success",
+  "timeout_seconds": 20.0,
+  "analysis_backend": "legacy",
+  "max_walks": 100000,
+  "compiler": "g++ (GCC) 8.5.0 20210514 (Red Hat 8.5.0-28)",
+  "command": [
+    "g++",
+    "-std=c++11",
+    "-O0",
+    "-DSFG_ENGINE=3",
+    "src/driver.cpp",
+    "-o",
+    "build/sfg-latest-12dcba3e212ca355"
+  ],
+  "build_sha256": "12dcba3e212ca355d4393205b40ff384331ad487423628c8a81c3bea27697a96",
+  "legacy_source": "src/legacy/readCkt3_SC_1.8_NEW.cpp",
+  "legacy_sha256": "062595caf247ba5f160cac9d0783161d88f1f540d6ec0a2e1bd12d45416cc73c",
+  "return_code": 0,
+  "elapsed_seconds": 0.123,
+  "node_count": 28,
+  "edge_count": 36,
+  "paths_count": 6,
+  "loops_count": 8,
+  "command_directory": "package root",
+  "plot_status": "success"
+}

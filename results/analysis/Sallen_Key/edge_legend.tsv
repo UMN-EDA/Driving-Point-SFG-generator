@@ -1,0 +1,13 @@
+id	label	source	weight	destination
+e001	1	-100	1	1
+e002	(1/(G3+G4))	-5	(1/(G3+G4))	5
+e003	(1/(G2+sC2))	-4	(1/(G2+sC2))	4
+e004	(1/(G1+sC1+G2))	-2	(1/(G1+sC1+G2))	2
+e005	G1	1	G1	-2
+e006	G2	2	G2	-4
+e007	1	3	1	100
+e008	sC1	3	sC1	-2
+e009	G3	3	G3	-5
+e010	G2	4	G2	-2
+e011	OP+	4	OP+	3
+e012	OP-	5	OP-	3

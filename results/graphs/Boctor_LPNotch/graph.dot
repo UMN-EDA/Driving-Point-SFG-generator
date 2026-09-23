@@ -1,0 +1,29 @@
+digraph SFG {
+graph [rankdir=LR, bgcolor="white", pad=0.35, nodesep=0.35, ranksep=0.8];
+node [shape=ellipse, style=filled, fontname="Helvetica", fontsize=11, color="#64748b"];
+edge [fontname="Helvetica", fontsize=9, color="#64748b", arrowsize=0.7];
+"-100" [label="VI", fillcolor="#dcfce7"];
+"-2" [label="-2", fillcolor="#ffedd5"];
+"-3" [label="-3", fillcolor="#ffedd5"];
+"-4" [label="-4", fillcolor="#ffedd5"];
+"0" [label="0", fillcolor="#dbeafe"];
+"1" [label="1", fillcolor="#dbeafe"];
+"100" [label="VO", fillcolor="#dcfce7"];
+"2" [label="2", fillcolor="#dbeafe"];
+"3" [label="3", fillcolor="#dbeafe"];
+"4" [label="4", fillcolor="#dbeafe"];
+"5" [label="5", fillcolor="#dbeafe"];
+"-100" -> "1" [label="1", tooltip="1"];
+"-4" -> "4" [label="(1/(G3+G5))", tooltip="(1/(G3+G5))"];
+"-3" -> "3" [label="(1/(G6+sC1+G1))", tooltip="(1/(G6+sC1+G1))"];
+"-2" -> "2" [label="(1/(sC2+G6+G2+G4))", tooltip="(1/(sC2+G6+G2+G4))"];
+"1" -> "-2" [label="sC2", tooltip="sC2"];
+"1" -> "-4" [label="G3", tooltip="G3"];
+"2" -> "-3" [label="G6", tooltip="G6"];
+"3" -> "-2" [label="G6", tooltip="G6"];
+"3" -> "5" [label="OP-", tooltip="OP-"];
+"4" -> "5" [label="OP+", tooltip="OP+"];
+"5" -> "100" [label="1", tooltip="1"];
+"5" -> "-3" [label="sC1", tooltip="sC1"];
+"5" -> "-2" [label="G4", tooltip="G4"];
+}

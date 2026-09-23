@@ -1,0 +1,105 @@
+{
+  "nodes": [
+    "-100",
+    "-2",
+    "-4",
+    "-5",
+    "-7",
+    "0",
+    "1",
+    "100",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+  ],
+  "edges": [
+    {
+      "source": "-100",
+      "weight": "1",
+      "destination": "1"
+    },
+    {
+      "source": "-7",
+      "weight": "(1/(G4+G5))",
+      "destination": "7"
+    },
+    {
+      "source": "-5",
+      "weight": "(1/(sC2+G2))",
+      "destination": "5"
+    },
+    {
+      "source": "-4",
+      "weight": "(1/(sC1+G3+sC2))",
+      "destination": "4"
+    },
+    {
+      "source": "-2",
+      "weight": "(1/(G1+sC3+G2))",
+      "destination": "2"
+    },
+    {
+      "source": "1",
+      "weight": "G1",
+      "destination": "-2"
+    },
+    {
+      "source": "1",
+      "weight": "sC1",
+      "destination": "-4"
+    },
+    {
+      "source": "2",
+      "weight": "G2",
+      "destination": "-5"
+    },
+    {
+      "source": "3",
+      "weight": "sC3",
+      "destination": "-2"
+    },
+    {
+      "source": "3",
+      "weight": "G3",
+      "destination": "-4"
+    },
+    {
+      "source": "4",
+      "weight": "sC2",
+      "destination": "-5"
+    },
+    {
+      "source": "5",
+      "weight": "sC2",
+      "destination": "-4"
+    },
+    {
+      "source": "5",
+      "weight": "G2",
+      "destination": "-2"
+    },
+    {
+      "source": "5",
+      "weight": "(1/(1+A))",
+      "destination": "6"
+    },
+    {
+      "source": "6",
+      "weight": "1",
+      "destination": "100"
+    },
+    {
+      "source": "6",
+      "weight": "G4",
+      "destination": "-7"
+    },
+    {
+      "source": "7",
+      "weight": "(1/(1+A))",
+      "destination": "3"
+    }
+  ]
+}

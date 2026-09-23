@@ -1,0 +1,29 @@
+{
+  "input_name": "Boctor_LPNotch.isc",
+  "input_sha256": "a800af997424eb45bbe1a18d5aa5aef5ca2a3b0a9b6079c817b51e03e599c7f4",
+  "engine": "ct",
+  "mode": "graph",
+  "phases": 1,
+  "started_utc": "2026-09-23T15:12:45.664602+00:00",
+  "status": "success",
+  "timeout_seconds": 20.0,
+  "compiler": "g++ (GCC) 8.5.0 20210514 (Red Hat 8.5.0-28)",
+  "command": [
+    "g++",
+    "-std=c++11",
+    "-O0",
+    "-DSFG_ENGINE=1",
+    "src/driver.cpp",
+    "-o",
+    "build/sfg-ct-c87d3b8ee4bcf133"
+  ],
+  "build_sha256": "c87d3b8ee4bcf133d0d134949095aed9eb68807be7f794359933ec098b4c4e2d",
+  "legacy_source": "src/legacy/readCkt3.cpp",
+  "legacy_sha256": "bf2ccd1eedb380ff0fd8e6bba1eb15451cdb2716b19e30e0f92a2ffd2c48a027",
+  "return_code": 0,
+  "elapsed_seconds": 0.044,
+  "node_count": 11,
+  "edge_count": 13,
+  "plot_status": "success",
+  "command_directory": "package root"
+}

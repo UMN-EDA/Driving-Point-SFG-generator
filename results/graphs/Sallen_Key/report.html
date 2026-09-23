@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sallen_Key.isc — signal-flow graph</title>
+<style>
+body {font:16px/1.5 system-ui,sans-serif;color:#172033;max-width:1400px;margin:36px auto;padding:0 24px;background:#f8fafc}
+h1 {margin-bottom:4px} .card {background:white;border:1px solid #e2e8f0;border-radius:12px;padding:20px;margin:20px 0}
+a {color:#1d4ed8} object {width:100%;min-height:420px;max-height:900px} table {border-collapse:collapse;width:100%}
+th,td {padding:10px;border-bottom:1px solid #e2e8f0;text-align:left} code {overflow-wrap:anywhere} pre {overflow:auto}
+</style><h1>Sallen_Key.isc</h1><p>Driving-point signal-flow graph · engine: ct · mode: graph · status: success</p>
+<p>Nodes: 11 · Edges: 12 · Paths: not requested · Loops: not requested</p><div class="card"><object data="graph.svg" type="image/svg+xml"><img src="graph.png" alt="Signal-flow graph"></object>
+<p><a href="graph.svg">Open full SVG</a> · <a href="graph.png">PNG image</a></p>
+<p>Green: input/output. Orange: auxiliary nodes. Blue: circuit nodes. Long gains use edge IDs; exact expressions appear below.</p></div>
+<div class="card"><h2>Edge gains</h2><table><thead><tr><th>ID</th><th>Source</th><th>Destination</th><th>Gain</th></tr></thead><tbody><tr><td>e001</td><td>-100</td><td>1</td><td><code>1</code></td></tr><tr><td>e002</td><td>-5</td><td>5</td><td><code>(1/(G3+G4))</code></td></tr><tr><td>e003</td><td>-4</td><td>4</td><td><code>(1/(G2+sC2))</code></td></tr><tr><td>e004</td><td>-2</td><td>2</td><td><code>(1/(G1+sC1+G2))</code></td></tr><tr><td>e005</td><td>1</td><td>-2</td><td><code>G1</code></td></tr><tr><td>e006</td><td>2</td><td>-4</td><td><code>G2</code></td></tr><tr><td>e007</td><td>3</td><td>100</td><td><code>1</code></td></tr><tr><td>e008</td><td>3</td><td>-2</td><td><code>sC1</code></td></tr><tr><td>e009</td><td>3</td><td>-5</td><td><code>G3</code></td></tr><tr><td>e010</td><td>4</td><td>-2</td><td><code>G2</code></td></tr><tr><td>e011</td><td>4</td><td>3</td><td><code>OP+</code></td></tr><tr><td>e012</td><td>5</td><td>3</td><td><code>OP-</code></td></tr></tbody></table></div>
+<div class="card"><h2>Paths and loops</h2></div><p><a href="graph.tsv">graph.tsv</a> · <a href="nodes.tsv">nodes.tsv</a> · <a href="graph.json">graph.json</a> · <a href="graph.dot">graph.dot</a> · <a href="edge_legend.tsv">edge_legend.tsv</a> · <a href="generator.log">generator.log</a> · <a href="run.json">run.json</a></p>
+<p>Generated with the driving-point signal-flow graph toolkit.</p></html>

@@ -1,0 +1,15 @@
+digraph SFG {
+graph [rankdir=LR, bgcolor="white", pad=0.35, nodesep=0.35, ranksep=0.8];
+node [shape=ellipse, style=filled, fontname="Helvetica", fontsize=11, color="#64748b"];
+edge [fontname="Helvetica", fontsize=9, color="#64748b", arrowsize=0.7];
+"-100" [label="VI", fillcolor="#dcfce7"];
+"-2" [label="-2", fillcolor="#ffedd5"];
+"0" [label="0", fillcolor="#dbeafe"];
+"1" [label="1", fillcolor="#dbeafe"];
+"100" [label="VO", fillcolor="#dcfce7"];
+"2" [label="2", fillcolor="#dbeafe"];
+"-100" -> "1" [label="1", tooltip="1"];
+"-2" -> "2" [label="(1/(G1+sC1))", tooltip="(1/(G1+sC1))"];
+"1" -> "-2" [label="G1", tooltip="G1"];
+"2" -> "100" [label="1", tooltip="1"];
+}

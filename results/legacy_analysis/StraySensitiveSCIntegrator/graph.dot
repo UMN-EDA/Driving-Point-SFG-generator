@@ -1,0 +1,34 @@
+digraph SFG {
+graph [rankdir=LR, bgcolor="white", pad=0.35, nodesep=0.35, ranksep=0.8];
+node [shape=ellipse, style=filled, fontname="Helvetica", fontsize=11, color="#64748b"];
+edge [fontname="Helvetica", fontsize=9, color="#64748b", arrowsize=0.7];
+"-100" [label="VI", fillcolor="#dcfce7"];
+"-12.000000_S2" [label="-12_S2", fillcolor="#ffedd5"];
+"-32.000000_S2" [label="-32_S2", fillcolor="#ffedd5"];
+"-8.000000_S1" [label="-8_S1", fillcolor="#ffedd5"];
+"1" [label="1", fillcolor="#dbeafe"];
+"100" [label="VO", fillcolor="#dcfce7"];
+"12.000000_S2" [label="12_S2", fillcolor="#dbeafe"];
+"16.000000_S2" [label="16_S2", fillcolor="#dbeafe"];
+"2.000000_S2" [label="2_S2", fillcolor="#dbeafe"];
+"32.000000_S2" [label="32_S2", fillcolor="#dbeafe"];
+"48.000000_S1" [label="48_S1", fillcolor="#dbeafe"];
+"6.000000_S1" [label="6_S1", fillcolor="#dbeafe"];
+"8.000000_S1" [label="8_S1", fillcolor="#dbeafe"];
+"-100" -> "2.000000_S2" [label="1", tooltip="1"];
+"-100" -> "6.000000_S1" [label="1", tooltip="1"];
+"-12.000000_S2" -> "12.000000_S2" [label="(1/(+C1+C2))", tooltip="(1/(+C1+C2))"];
+"-32.000000_S2" -> "32.000000_S2" [label="(1/())", tooltip="(1/())"];
+"-8.000000_S1" -> "8.000000_S1" [label="(1/(+C2))", tooltip="(1/(+C2))"];
+"12.000000_S2" -> "16.000000_S2" [label="OP-", tooltip="OP-"];
+"12.000000_S2" -> "-8.000000_S1" [label="z^-1C2", tooltip="z^-1C2"];
+"16.000000_S2" -> "-12.000000_S2" [label="C2", tooltip="C2"];
+"16.000000_S2" -> "-8.000000_S1" [label="-z^-1C2", tooltip="-z^-1C2"];
+"32.000000_S2" -> "100" [label="1", tooltip="1"];
+"48.000000_S1" -> "100" [label="1", tooltip="1"];
+"48.000000_S1" -> "-8.000000_S1" [label="C2", tooltip="C2"];
+"48.000000_S1" -> "-12.000000_S2" [label="-z^-1C2", tooltip="-z^-1C2"];
+"6.000000_S1" -> "-12.000000_S2" [label="z^-1C1", tooltip="z^-1C1"];
+"8.000000_S1" -> "48.000000_S1" [label="OP-", tooltip="OP-"];
+"8.000000_S1" -> "-12.000000_S2" [label="z^-1C2", tooltip="z^-1C2"];
+}

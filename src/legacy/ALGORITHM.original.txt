@@ -1,0 +1,132 @@
+1. First manually number all nodes
+2. Make the input file as follows
+FOR EXAMPLE - SALLEN KEY FILTER
+*******************************
+5
+VI_1_1
+3_1_VO
+1_G1_2
+2_C1_3
+2_G2_4
+4_OP+_3
+4_C2_G
+5_OP-_3
+3_G3_5
+5_G4_G
+*******************************
+The first line is the number showing number of nodes in the Circuit excluding input and output node.
+The 2nd line shows to which circuit node, the input node is connected with branch weight 1.
+The 3rd line shows to which circuit node, the output node is connected with branch weight 1.
+Rest of the lines shows the all the branches in the circuit in the format of,
+SOURCE_NODE Element (ACTIVE or PASSIVE) DESTINATION_NODE.
+*******************************
+CREATION OF GRAPH WHILE READING THE CIRCUIT FILE
+EVERY NODE IN THE GRAPH HAS A FLAG CALLED MAGIC = 1 if it is not connected to any voltage source .... i.e. magic source is connected to that node.
+From the first line create n such nodes with NODE ID= Key = X where x= 1...n And all their FLAGS=1 By default.
+Create 2 nodes Vi and Vo with key = -100 and -1000 and node ID= Key (-100 for Input node and -1000 for output node) and FLAG of VI =0.
+
+Now read the 2nd line and update the output 2D array of VI with its Destination_node and edge_weights =1 and also create the respective
+Destination_node and update its Input 2D array with the VI node and edge weight =1 and FLAG=0.
+Now read the 3rd line and update the input 2D array of VO with its Source_node and edge_weights =1 and also create the respective
+Source_node and update its Output 2D array with the VO node and edge weight =1.
+##########################
+FIRST READ
+
+IF ELEMENT == OP+ || OP-
+	Update the Flag of DESTINATION_NODE=0
+ELSE if FLAG OF SOURCE_ELEMENT ==0
+	Update the Flag of DESTINATION_NODE=0
+##########################
+SECOND READ
+
+IF FLAG OF DESTINATION_NODE==0
+	Update the 2D Matrix of both source and destination node output and input node
+ELSE
+	CREATE A NEW NODE WHOSE KEY AND ID = -(DESTINATION_NODE)
+	Update the Input 2D Matrix of the new node
+	Update the Output 2D Matrix of the new node 
+
+
+
+From 4th line onwards:
+1. Search for the SOURCE_NODE in the map
+	IF FLAG==0
+		Create 
+3. 
+***********************************************************************************
+***********************************************************************************
+1. Algorithm to find forward paths: https://www.baeldung.com/cs/simple-paths-between-two-vertices
+2. Algorithm to find all cyles:  https://www.baeldung.com/cs/detecting-cycles-in-directed-graph
+3. Algorithm to find all combinations of loops: https://www.geeksforgeeks.org/print-all-possible-combinations-of-r-elements-in-a-given-array-of-size-n/
+
+
+*************************************************************************************
+VARIABLE NAMES LIST
+
+1. vector<string> LoopGains : Vector of all selected Loop Gains (No repeatation of loops)
+2. vcetor<vector<double>> All_Loop : Vector of Vectors of nodes of each loops (Contains repeatation of loops)
+3. vector <vector <double>> FinalLoops : Vector of Vectors of nodes of each loops (No repeatation of loops)
+4. vector<vector<double>> All_Path : Vector of vectors of nodes of each forward paths (No repeatation of paths)
+5. vector <string> ForwardGains  Vector containing the gains of each forward paths (No repeation of paths)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%MULTIPHASE CIRCUITS%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1. Multiple phase (a,b,c...)
+2. Phases will be numerically named like 1,2,3...etc
+
+
+
+
+********************************************************************
+INPUT FORMAT
+
+
+<No. of Phases>
+TEST CIRCUIT AS GIVEN IN H.SCHMIDT PAPER
+
+2 PHASE
+
+2		//No. of Phases
+4		//No. of Nodes
+VI_1_1
+4_1_VO
+3_OP-_4
+1_S1_2
+2_S2_3
+2_C1_0
+4_C2_3
+END
+
+*********************************************************************
+ALGORITHM TO MAKE SEPARATE SUB CIRCUITS FOR DIFFERENT PHASES
+1. First read the circuit file and implement all the nodes and branches irrespective of switches/phases.
+2. for loop for n no. of times where n is the no. of phases in the circuit.
+3. Take one switch at a time and remove all branches containing other switches and copy it into a new map. 
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+STEPS TO FIND THE INTER SFG BRANCHES
+
+    Take 1 voltage source at a time
+	Check caps connected to it from CKTX
+	Find the voltage node in SFGFINAL...(Make sure to check its flag before searching the node)
+	Extract the input and output branches of the node
+	Take one capacitor at a time
+		Check which i/p or o/p branch is having this capcitor
+			If none...then it must be connected to the ground
+		Now move to the next phase and search all nodes and see which is having that capacitor from CKTX 
+			Find that respected voltage node again in the SFGFINAL (Make sure to check the flag before looking for the node in the SFG)
+			Check all its i/p and o/p branches of the node and look for the capacitor
+			If nowhere, then it must be grounded
+			Draw the branch in SFG from the very first VOLTAGE NODE to the PRESENT NODE in the new phase
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ADDITIONAL REQUIREMENTS
+
+1. Circuits with unity gain feedback in SC circuits
+2. no edge weight other than SWITCHES can start with S
+			

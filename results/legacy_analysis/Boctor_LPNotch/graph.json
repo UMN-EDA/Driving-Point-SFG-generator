@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    "-100",
+    "-2",
+    "-3",
+    "-4",
+    "0",
+    "1",
+    "100",
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "edges": [
+    {
+      "source": "-100",
+      "weight": "1",
+      "destination": "1"
+    },
+    {
+      "source": "-4",
+      "weight": "(1/(G3+G5))",
+      "destination": "4"
+    },
+    {
+      "source": "-3",
+      "weight": "(1/(G6+sC1+G1))",
+      "destination": "3"
+    },
+    {
+      "source": "-2",
+      "weight": "(1/(sC2+G6+G2+G4))",
+      "destination": "2"
+    },
+    {
+      "source": "1",
+      "weight": "sC2",
+      "destination": "-2"
+    },
+    {
+      "source": "1",
+      "weight": "G3",
+      "destination": "-4"
+    },
+    {
+      "source": "2",
+      "weight": "G6",
+      "destination": "-3"
+    },
+    {
+      "source": "3",
+      "weight": "G6",
+      "destination": "-2"
+    },
+    {
+      "source": "3",
+      "weight": "OP-",
+      "destination": "5"
+    },
+    {
+      "source": "4",
+      "weight": "OP+",
+      "destination": "5"
+    },
+    {
+      "source": "5",
+      "weight": "1",
+      "destination": "100"
+    },
+    {
+      "source": "5",
+      "weight": "sC1",
+      "destination": "-3"
+    },
+    {
+      "source": "5",
+      "weight": "G4",
+      "destination": "-2"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+z^-1C1.1/(s.C1+s.C2+s.CgsM2S2).z^-1C2.1/(s.C2+s.CgsM2S1).gmM2S1.1/(gdsM1S1+s.CgsM1S1+s.CdsM1S1+gdsM2S1+s.CgsM2S1+s.CdsM2S1+gdsM4S1+s.CdsM4S1).gmM1S1.1/(gdsM1S1+s.CdsM1S1+s.CgsP5S1+gmP5S1+gdsP5S1+s.CgsP6S1).gmP5S1.1/(G1+gdsP5S1+s.CgsP5S1+s.CdsP5S1+gdsP6S1+s.CgsP6S1+s.CdsP6S1).gmP6S1.1/(s.C2+gdsM2S1+s.CdsM2S1).
+z^-1C1.1/(s.C1+s.C2+s.CgsM2S2).z^-1C2.1/(s.C2+s.CgsM2S1).gmM2S1.1/(gdsM1S1+s.CgsM1S1+s.CdsM1S1+gdsM2S1+s.CgsM2S1+s.CdsM2S1+gdsM4S1+s.CdsM4S1).gmM1S1.1/(gdsM1S1+s.CdsM1S1+s.CgsP5S1+gmP5S1+gdsP5S1+s.CgsP6S1).-gmP6S1.1/(s.C2+gdsM2S1+s.CdsM2S1).
+z^-1C1.1/(s.C1+s.C2+s.CgsM2S2).z^-1C2.1/(s.C2+s.CgsM2S1).gmM2S1.1/(gdsM1S1+s.CgsM1S1+s.CdsM1S1+gdsM2S1+s.CgsM2S1+s.CdsM2S1+gdsM4S1+s.CdsM4S1).gmM2S1.1/(s.C2+gdsM2S1+s.CdsM2S1).
+z^-1C1.1/(s.C1+s.C2+s.CgsM2S2).z^-1C2.1/(s.C2+s.CgsM2S1).C2.1/(s.C2+gdsM2S1+s.CdsM2S1).

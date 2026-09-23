@@ -1,0 +1,33 @@
+{
+  "input_name": "TowThomasBQ.isc",
+  "input_sha256": "0fe6d422349f2ad9f46701e10cad49e3a40dbab59714b7979deda4dec5e50ea0",
+  "engine": "ct",
+  "mode": "analysis",
+  "phases": 1,
+  "started_utc": "2026-09-23T15:18:19.043284+00:00",
+  "status": "success",
+  "timeout_seconds": 20.0,
+  "analysis_backend": "legacy",
+  "max_walks": 100000,
+  "compiler": "g++ (GCC) 8.5.0 20210514 (Red Hat 8.5.0-28)",
+  "command": [
+    "g++",
+    "-std=c++11",
+    "-O0",
+    "-DSFG_ENGINE=1",
+    "src/driver.cpp",
+    "-o",
+    "build/sfg-ct-c87d3b8ee4bcf133"
+  ],
+  "build_sha256": "c87d3b8ee4bcf133d0d134949095aed9eb68807be7f794359933ec098b4c4e2d",
+  "legacy_source": "src/legacy/readCkt3.cpp",
+  "legacy_sha256": "bf2ccd1eedb380ff0fd8e6bba1eb15451cdb2716b19e30e0f92a2ffd2c48a027",
+  "return_code": 0,
+  "elapsed_seconds": 0.123,
+  "node_count": 13,
+  "edge_count": 16,
+  "paths_count": 1,
+  "loops_count": 5,
+  "command_directory": "package root",
+  "plot_status": "success"
+}

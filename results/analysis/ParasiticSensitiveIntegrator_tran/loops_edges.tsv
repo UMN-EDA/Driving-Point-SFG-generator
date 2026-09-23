@@ -1,0 +1,18 @@
+1/(gdsM1S2+s.CgsM1S2+s.CdsM1S2+gdsM2S2+s.CgsM2S2+s.CdsM2S2+gdsM4S2+s.CdsM4S2)	gmM1S2	1/(gdsM1S2+s.CdsM1S2+s.CgsP5S2+gmP5S2+gdsP5S2+s.CgsP6S2)	gmP5S2	1/(G1+gdsP5S2+s.CgsP5S2+s.CdsP5S2+gdsP6S2+s.CgsP6S2+s.CdsP6S2)	G1	1/(G1+s.CgsM3S2+gmM3S2+gdsM3S2+s.CgsM4S2)	-gmM4S2
+1/(s.C1+s.C2+s.CgsM2S2)	gmM2S2	1/(gdsM1S2+s.CgsM1S2+s.CdsM1S2+gdsM2S2+s.CgsM2S2+s.CdsM2S2+gdsM4S2+s.CdsM4S2)	gmM1S2	1/(gdsM1S2+s.CdsM1S2+s.CgsP5S2+gmP5S2+gdsP5S2+s.CgsP6S2)	gmP5S2	1/(G1+gdsP5S2+s.CgsP5S2+s.CdsP5S2+gdsP6S2+s.CgsP6S2+s.CdsP6S2)	gmP6S2	1/(s.C2+gdsM2S2+s.CdsM2S2+gdsP6S2+s.CdsP6S2)	C2
+1/(s.C1+s.C2+s.CgsM2S2)	gmM2S2	1/(gdsM1S2+s.CgsM1S2+s.CdsM1S2+gdsM2S2+s.CgsM2S2+s.CdsM2S2+gdsM4S2+s.CdsM4S2)	gmM1S2	1/(gdsM1S2+s.CdsM1S2+s.CgsP5S2+gmP5S2+gdsP5S2+s.CgsP6S2)	-gmP6S2	1/(s.C2+gdsM2S2+s.CdsM2S2+gdsP6S2+s.CdsP6S2)	C2
+1/(s.C1+s.C2+s.CgsM2S2)	gmM2S2	1/(gdsM1S2+s.CgsM1S2+s.CdsM1S2+gdsM2S2+s.CgsM2S2+s.CdsM2S2+gdsM4S2+s.CdsM4S2)	gmM2S2	1/(s.C2+gdsM2S2+s.CdsM2S2+gdsP6S2+s.CdsP6S2)	C2
+1/(gdsM1S2+s.CdsM1S2+s.CgsP5S2+gmP5S2+gdsP5S2+s.CgsP6S2)	gmP5S2	1/(G1+gdsP5S2+s.CgsP5S2+s.CdsP5S2+gdsP6S2+s.CgsP6S2+s.CdsP6S2)	gmP5S2
+1/(G1+gdsP5S2+s.CgsP5S2+s.CdsP5S2+gdsP6S2+s.CgsP6S2+s.CdsP6S2)	G1	1/(G1+s.CgsM3S2+gmM3S2+gdsM3S2+s.CgsM4S2)	G1
+1/(s.C2+gdsM2S1+s.CdsM2S1)	C2	1/(s.C2+s.CgsM2S1)	C2
+1/(gdsM1S1+s.CgsM1S1+s.CdsM1S1+gdsM2S1+s.CgsM2S1+s.CdsM2S1+gdsM4S1+s.CdsM4S1)	gmM2S1	1/(s.C2+gdsM2S1+s.CdsM2S1)	C2	1/(s.C2+s.CgsM2S1)	gmM2S1
+1/(gdsM1S1+s.CgsM1S1+s.CdsM1S1+gdsM2S1+s.CgsM2S1+s.CdsM2S1+gdsM4S1+s.CdsM4S1)	gmM1S1	1/(gdsM1S1+s.CdsM1S1+s.CgsP5S1+gmP5S1+gdsP5S1+s.CgsP6S1)	-gmP6S1	1/(s.C2+gdsM2S1+s.CdsM2S1)	C2	1/(s.C2+s.CgsM2S1)	gmM2S1
+1/(gdsM1S1+s.CgsM1S1+s.CdsM1S1+gdsM2S1+s.CgsM2S1+s.CdsM2S1+gdsM4S1+s.CdsM4S1)	gmM1S1	1/(gdsM1S1+s.CdsM1S1+s.CgsP5S1+gmP5S1+gdsP5S1+s.CgsP6S1)	gmP5S1	1/(G1+gdsP5S1+s.CgsP5S1+s.CdsP5S1+gdsP6S1+s.CgsP6S1+s.CdsP6S1)	gmP6S1	1/(s.C2+gdsM2S1+s.CdsM2S1)	C2	1/(s.C2+s.CgsM2S1)	gmM2S1
+1/(s.C1+s.C2+s.CgsM2S2)	z^-1C2	1/(s.C2+s.CgsM2S1)	C2	1/(s.C2+gdsM2S1+s.CdsM2S1)	z^-1C2
+1/(s.C1+s.C2+s.CgsM2S2)	z^-1C2	1/(s.C2+s.CgsM2S1)	gmM2S1	1/(gdsM1S1+s.CgsM1S1+s.CdsM1S1+gdsM2S1+s.CgsM2S1+s.CdsM2S1+gdsM4S1+s.CdsM4S1)	gmM2S1	1/(s.C2+gdsM2S1+s.CdsM2S1)	z^-1C2
+1/(s.C1+s.C2+s.CgsM2S2)	z^-1C2	1/(s.C2+s.CgsM2S1)	gmM2S1	1/(gdsM1S1+s.CgsM1S1+s.CdsM1S1+gdsM2S1+s.CgsM2S1+s.CdsM2S1+gdsM4S1+s.CdsM4S1)	gmM1S1	1/(gdsM1S1+s.CdsM1S1+s.CgsP5S1+gmP5S1+gdsP5S1+s.CgsP6S1)	-gmP6S1	1/(s.C2+gdsM2S1+s.CdsM2S1)	z^-1C2
+1/(s.C1+s.C2+s.CgsM2S2)	z^-1C2	1/(s.C2+s.CgsM2S1)	gmM2S1	1/(gdsM1S1+s.CgsM1S1+s.CdsM1S1+gdsM2S1+s.CgsM2S1+s.CdsM2S1+gdsM4S1+s.CdsM4S1)	gmM1S1	1/(gdsM1S1+s.CdsM1S1+s.CgsP5S1+gmP5S1+gdsP5S1+s.CgsP6S1)	gmP5S1	1/(G1+gdsP5S1+s.CgsP5S1+s.CdsP5S1+gdsP6S1+s.CgsP6S1+s.CdsP6S1)	gmP6S1	1/(s.C2+gdsM2S1+s.CdsM2S1)	z^-1C2
+1/(s.C1+s.C2+s.CgsM2S2)	C2	1/(s.C2+gdsM2S2+s.CdsM2S2+gdsP6S2+s.CdsP6S2)	C2
+1/(G1+gdsP5S1+s.CgsP5S1+s.CdsP5S1+gdsP6S1+s.CgsP6S1+s.CdsP6S1)	G1	1/(G1+s.CgsM3S1+gmM3S1+gdsM3S1+s.CgsM4S1)	G1
+1/(gdsM1S1+s.CgsM1S1+s.CdsM1S1+gdsM2S1+s.CgsM2S1+s.CdsM2S1+gdsM4S1+s.CdsM4S1)	gmM1S1	1/(gdsM1S1+s.CdsM1S1+s.CgsP5S1+gmP5S1+gdsP5S1+s.CgsP6S1)	gmP5S1	1/(G1+gdsP5S1+s.CgsP5S1+s.CdsP5S1+gdsP6S1+s.CgsP6S1+s.CdsP6S1)	G1	1/(G1+s.CgsM3S1+gmM3S1+gdsM3S1+s.CgsM4S1)	-gmM4S1
+1/(gdsM1S1+s.CdsM1S1+s.CgsP5S1+gmP5S1+gdsP5S1+s.CgsP6S1)	gmP5S1	1/(G1+gdsP5S1+s.CgsP5S1+s.CdsP5S1+gdsP6S1+s.CgsP6S1+s.CdsP6S1)	gmP5S1

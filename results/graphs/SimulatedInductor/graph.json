@@ -1,0 +1,211 @@
+{
+  "nodes": [
+    "-100",
+    "-12.000000_S2",
+    "-32.000000_S2",
+    "-32.000000_S3",
+    "-36.000000_S4",
+    "-8.000000_S1",
+    "-8.000000_S3",
+    "-8.000000_S4",
+    "1",
+    "100",
+    "12.000000_S2",
+    "16.000000_S2",
+    "16.000000_S4",
+    "2.000000_S2",
+    "2.000000_S3",
+    "2.000000_S4",
+    "20.000000_S3",
+    "32.000000_S2",
+    "32.000000_S3",
+    "36.000000_S4",
+    "48.000000_S1",
+    "6.000000_S1",
+    "8.000000_S1",
+    "8.000000_S3",
+    "8.000000_S4"
+  ],
+  "edges": [
+    {
+      "source": "-100",
+      "weight": "1",
+      "destination": "2.000000_S2"
+    },
+    {
+      "source": "-100",
+      "weight": "1",
+      "destination": "2.000000_S3"
+    },
+    {
+      "source": "-100",
+      "weight": "1",
+      "destination": "2.000000_S4"
+    },
+    {
+      "source": "-100",
+      "weight": "1",
+      "destination": "6.000000_S1"
+    },
+    {
+      "source": "-12.000000_S2",
+      "weight": "(1/(+C0+C2))",
+      "destination": "12.000000_S2"
+    },
+    {
+      "source": "-32.000000_S2",
+      "weight": "(1/(+C1))",
+      "destination": "32.000000_S2"
+    },
+    {
+      "source": "-32.000000_S3",
+      "weight": "(1/(+C1))",
+      "destination": "32.000000_S3"
+    },
+    {
+      "source": "-36.000000_S4",
+      "weight": "(1/(+C0+C1))",
+      "destination": "36.000000_S4"
+    },
+    {
+      "source": "-8.000000_S1",
+      "weight": "(1/(+C2))",
+      "destination": "8.000000_S1"
+    },
+    {
+      "source": "-8.000000_S3",
+      "weight": "(1/(+C2))",
+      "destination": "8.000000_S3"
+    },
+    {
+      "source": "-8.000000_S4",
+      "weight": "(1/(+C2))",
+      "destination": "8.000000_S4"
+    },
+    {
+      "source": "12.000000_S2",
+      "weight": "OP-",
+      "destination": "16.000000_S2"
+    },
+    {
+      "source": "12.000000_S2",
+      "weight": "z^-1C2",
+      "destination": "-8.000000_S3"
+    },
+    {
+      "source": "16.000000_S2",
+      "weight": "C2",
+      "destination": "-12.000000_S2"
+    },
+    {
+      "source": "16.000000_S2",
+      "weight": "-z^-1C2",
+      "destination": "-8.000000_S3"
+    },
+    {
+      "source": "16.000000_S4",
+      "weight": "C2",
+      "destination": "-8.000000_S4"
+    },
+    {
+      "source": "16.000000_S4",
+      "weight": "-z^-1C2",
+      "destination": "-8.000000_S1"
+    },
+    {
+      "source": "20.000000_S3",
+      "weight": "C2",
+      "destination": "-8.000000_S3"
+    },
+    {
+      "source": "20.000000_S3",
+      "weight": "z^-1C0",
+      "destination": "-36.000000_S4"
+    },
+    {
+      "source": "20.000000_S3",
+      "weight": "-z^-1C2",
+      "destination": "-8.000000_S4"
+    },
+    {
+      "source": "32.000000_S2",
+      "weight": "1",
+      "destination": "100"
+    },
+    {
+      "source": "32.000000_S2",
+      "weight": "z^-1C1",
+      "destination": "-32.000000_S3"
+    },
+    {
+      "source": "32.000000_S3",
+      "weight": "1",
+      "destination": "100"
+    },
+    {
+      "source": "32.000000_S3",
+      "weight": "z^-1C1",
+      "destination": "-36.000000_S4"
+    },
+    {
+      "source": "36.000000_S4",
+      "weight": "1",
+      "destination": "100"
+    },
+    {
+      "source": "48.000000_S1",
+      "weight": "1",
+      "destination": "100"
+    },
+    {
+      "source": "48.000000_S1",
+      "weight": "C2",
+      "destination": "-8.000000_S1"
+    },
+    {
+      "source": "48.000000_S1",
+      "weight": "-z^-1C2",
+      "destination": "-12.000000_S2"
+    },
+    {
+      "source": "48.000000_S1",
+      "weight": "z^-1C1",
+      "destination": "-32.000000_S2"
+    },
+    {
+      "source": "6.000000_S1",
+      "weight": "z^-1C0",
+      "destination": "-12.000000_S2"
+    },
+    {
+      "source": "8.000000_S1",
+      "weight": "OP-",
+      "destination": "48.000000_S1"
+    },
+    {
+      "source": "8.000000_S1",
+      "weight": "z^-1C2",
+      "destination": "-12.000000_S2"
+    },
+    {
+      "source": "8.000000_S3",
+      "weight": "OP-",
+      "destination": "20.000000_S3"
+    },
+    {
+      "source": "8.000000_S3",
+      "weight": "z^-1C2",
+      "destination": "-8.000000_S4"
+    },
+    {
+      "source": "8.000000_S4",
+      "weight": "OP-",
+      "destination": "16.000000_S4"
+    },
+    {
+      "source": "8.000000_S4",
+      "weight": "z^-1C2",
+      "destination": "-8.000000_S1"
+    }
+  ]
+}

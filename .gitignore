@@ -1,0 +1,9 @@
+.venv/
+.cache/
+build/
+__pycache__/
+*.pyc
+core
+core.*
+# User runs are disposable; checked-in reference runs are under results/.
+runs/
